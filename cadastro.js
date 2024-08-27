@@ -10,7 +10,7 @@ function listUsers() {
       userList.innerHTML = "";
       data.forEach((user) => {
         const li = document.createElement("li");
-        li.innerHTML = `ID: ${user.id} - Nome: ${user.nome} - Email: ${user.email} - Senha: ${user.senha}`;
+        li.innerHTML = `ID: ${user.id} - Nome: ${user.nome} - Email: ${user.email} CRM- ${user.crm} - Senha: ${user.senha}`;
         userList.appendChild(li);
 
         const deleteButton = document.createElement("button");
@@ -34,14 +34,16 @@ userForm.addEventListener("submit", (e) => {
 
   const nome = document.getElementById("nome-cadastro").value;
   const email = document.getElementById("email-cadastro").value;
+  const crm = document.getElementById("crm-cadastro").value;
   const senha = document.getElementById("senha-cadastro").value;
+  
 
   fetch("http://localhost:3000/usuario", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ nome: nome, email: email, senha: senha }),
+    body: JSON.stringify({ nome: nome, email: email, crm:crm, senha: senha }),
   })
     .then((response) => response.json())
     .then(() => {
@@ -67,9 +69,10 @@ function deleteUser(id) {
 function updateUser(id) {
   const nome = document.getElementById("nome-lista").value;
   const email = document.getElementById("email-lista").value;
+  const crm = document.getElementById("crm-lista").value
   const senha = document.getElementById("senha-lista").value;
 
-  if (nome.trim() === "" && email.trim() === "" && senha.trim() === "") {
+  if (nome.trim() === "" && email.trim() === "" && crm.trim() === ""&& senha.trim()) {
     alert("Preencha ao menos um dos campos para prosseguir com a alteração");
   } else {
     fetch(`http://localhost:3000/usuario/${id}`, {
@@ -77,7 +80,7 @@ function updateUser(id) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome: nome, email: email, senha: senha }),
+      body: JSON.stringify({ nome: nome, email: email,crm:crm , senha: senha }),
     })
       .then((response) => response.json())
       .then(() => {

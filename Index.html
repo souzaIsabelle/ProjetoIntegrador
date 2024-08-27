@@ -1,64 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>Home</title>
-</head>
-<body>
-    <section>
-        <header>
-            
-            <nav class="navegation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="Login.html">Login</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                
-            </nav>
-        </header>
-        <div class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    
+    <link rel="icon" href="imagens/coracao.png" type="image/png">
 
-            
-            <div class="text">
+    <title> Ampliando a Consciência🩺</title>
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">Ampliando a <span>Consciência</span></div>
+        <ul class="nav__links">
+         <li class="link"><a href="#home">Home</a></li>
+          <li class="link"><a href="#about">Sobre Nós</a></li>
+          <li class="link"><a href="">Ist's</a></li>
+          <li class="link"><a href="">Contato</a></li>
+          <li class="link"><a href='blog.html'>Blog</a></li>
+        </ul>
+        <button class="btn" onclick="location.href='login.html'">Login</button>
 
-                <h2>Ola Amigo,Seja<br><span>Bem Vindo!</span></h2>
-                <p>As Infecções Sexualmente Transmissíveis (ISTs) são doenças transmitidas principalmente por contato sexual desprotegido. Entre as mais comuns estão sífilis, gonorreia, clamídia, HPV, HIV e herpes genital. Muitas ISTs podem ser assintomáticas, tornando a prevenção, o diagnóstico precoce e o tratamento essenciais. A educação, o uso de preservativos e exames regulares são fundamentais para a prevenção. Promover a saúde sexual e desmistificar preconceitos são passos importantes para um futuro mais saudável.</p>
-                <a href="sobrenos.html">Sobre Nós</a>
-                
-                
-            </div>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <div class="header__content">
+          <h1>Cuide do seu corpo, é o único lugar que você tem para viver.  </h1>
+          <p>
+            Bem-vindo ao lugar onde a experiência do paciente é nossa maior prioridade. 
+            Oferecemos cuidado compassivo, instalações modernas e uma abordagem focada no paciente. 
+            Estamos comprometidos com o seu bem-estar. Confie sua saúde a nós e sinta a diferença.
+          </p>
+          <button class="btn" onclick="location.href='#service'">Veja os Nossos Serviços!</button>
+        </div>
+        <div class="header__form">
+          <form id= "newsletterForm">
+            <h4>Receba Noticias!</h4>
+            <input type="text" id="nomeID" placeholder="Nome" />
+            <input type="text" id="sobrenomeID" placeholder="sobrenome" />
+            <input type="text" id="emailID" placeholder="email" />
+            <button class="btn form__btn" type ="submit">Inscreva-se</button>
+          </form>
+         
+          
 
-            
-                <br><br><br><br><br><br><br>
-            
-                <div class="textInfo">
-                    <h1>A Extrema Importância da Conscientização sobre Infecções Sexualmente Transmissíveis</h1>
-                    <p>As Infecções Sexualmente Transmissíveis (ISTs) representam uma preocupação significativa para a saúde pública global. Doenças como HIV, sífilis, gonorreia e clamídia continuam a afetar milhões de pessoas todos os anos, muitas vezes com consequências graves para a saúde física e mental.
-
-                        A conscientização sobre ISTs é essencial por várias razões. Primeiramente, muitas dessas infecções podem ser assintomáticas no início, o que dificulta o diagnóstico precoce e o tratamento adequado. Sem conscientização, as pessoas podem continuar a transmitir a infecção sem saber, perpetuando a propagação e aumentando o risco de complicações graves.
-                        
-                        Além disso, a educação sobre práticas sexuais seguras, como o uso consistente de preservativos, pode reduzir drasticamente a transmissão de ISTs. Programas de conscientização também desmistificam tabus e estigmas associados a essas infecções, incentivando mais pessoas a buscar aconselhamento, testagem e tratamento.
-                        
-                        A conscientização não se limita apenas à prevenção, mas também inclui a promoção de tratamento adequado e a importância do acompanhamento médico. Muitas ISTs são tratáveis e, com o tratamento correto, as complicações podem ser minimizadas, melhorando a qualidade de vida dos infectados.
-                        
-                        Por fim, a conscientização sobre ISTs reforça a importância do respeito e da responsabilidade nas relações sexuais. Ela incentiva o diálogo aberto entre parceiros e a tomada de decisões informadas, contribuindo para uma sociedade mais saudável e informada.
-                        
-                        Promover a conscientização sobre ISTs é, portanto, um passo crucial para proteger a saúde individual e pública, reduzir a disseminação de infecções e construir um futuro mais seguro e saudável para todos.</p>
-                </div>
-           
         </div>
 
 
+      </div>
+    </header>
 
-        <div class="images">
-            <img src="imagens/4218041-removebg-preview.png">
+    <section class="section__container service__container" id="service">
+      <div class="service__header">
+        <div class="service__header__content">
+          <h2 class="section__header">Nossos Serviços</h2>
+          <p>
+            Além de apenas oferecer cuidados de saúde, 
+            nosso compromisso está em proporcionar um atendimento excepcional, 
+            personalizado às suas necessidades individuais.
+          </p>
         </div>
         
+      </div>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-book-line"></i></span>
+          <h4>Fique Informado!</h4>
+          <p>
+            Mantenha-se bem informado! Oferecemos uma área de estudos dedicada, onde você pode se conscientizar sobre diversos temas de saúde. 
+            Explore nossos recursos e aprenda mais sobre prevenção, diagnóstico e tratamentos para cuidar melhor de sua saúde.
+          </p>
+          <a href="#">Entenda Melhor</a>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-mental-health-line"></i></span>
+          <h4>Teste Sua Saúde!</h4>
+          <p>
+            Preparamos um formulário especialmente para você! Com ele, você pode facilmente verificar se há alguma chance de estar infectado. 
+            É rápido, simples e feito pensando no seu bem-estar. Cuide da sua saúde de maneira prática e segura!
+          </p>
+          <a href="#">Entenda Melhor!</a>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-hospital-line"></i></span>
+          <h4>Fale com um Medico!</h4>
+          <p>
+            Se sentir mais seguro sabendo exatamente o que fazer é importante, não é? 
+            Por isso, oferecemos a opção de conversar diretamente com um de nossos médicos. Eles estão sempre prontos para ajudar e esclarecer suas dúvidas, garantindo que você receba o melhor atendimento possível.
+          </p>
+          <a href="#">Entenda Melhor!</a>
+        </div>
+      </div>
     </section>
-</body>
+    
+    <section class="section__container about__container" id="about">
+      <div class="about__content">
+        <h2 class="section__header">Sobre Nós</h2>
+        <p>
+            Seja bem-vindo ao nosso projeto "Ampliando a Consciência", uma iniciativa dedicada a aumentar o conhecimento sobre as infecções sexualmente transmissíveis (ISTs). 
+            Nosso objetivo é fornecer orientações claras e educar a população sobre a prevenção, diagnóstico e tratamento dessas infecções. 
+            Com informações acessíveis e precisas, esperamos reduzir a incidência de ISTs e seu impacto na saúde pública.
+        </p>
+        <p>
+            Estamos comprometidos em promover a importância da educação sexual, facilitando o acesso a serviços de saúde e incentivando a adoção de práticas seguras. 
+            Acreditamos que, ao aumentar a conscientização, podemos proteger a saúde e o bem-estar de todos. 
+            Cada passo em direção a um melhor entendimento e prevenção das ISTs é um avanço significativo para nossa comunidade.
+        </p>
+        <p>
+            Junte-se a nós nessa missão essencial de enfrentar e diminuir o impacto das ISTs em nossas vidas. 
+            Com o apoio e engajamento de todos, podemos criar um ambiente mais seguro e informado, onde a saúde e o bem-estar são prioridades para todos. 
+            Vamos juntos ampliar a consciência e fazer a diferença!
+        </p>
+      </div>
+      <div class="about__image">
+        <img src="imagens/about.jpg" alt="about" />
+      </div>
+    </section>
+
+    <section class="section__container why__container" id="blog">
+      <div class="why__image">
+        <img src="imagens/choose-us.jpg" alt="why choose us" />
+      </div>
+      <div class="why__content">
+        <h2 class="section__header">Porque Escolher a gente?</h2>
+        <p>
+            Com um dedicado compromisso com o seu bem-estar, nossa equipe de profissionais de saúde altamente qualificados está aqui para garantir que você tenha uma experiência de atendimento realmente excepcional. 
+            Cada membro da nossa equipe se empenha em oferecer um cuidado de primeira linha, focado nas suas necessidades e conforto. 
+            Confie em nós para proporcionar um atendimento que vai além das expectativas.
+        </p>
+        <div class="why__grid">
+          <span><i class="ri-hand-heart-line"></i></span>
+          <div>
+            <h4>Cuidado Intensivo</h4>
+            <p>
+                Nossa Unidade é um ambiente de alta tecnologia, projetado para oferecer o melhor cuidado possível. 
+                Contamos com equipamentos modernos e uma equipe de profissionais experientes, dedicados a proporcionar um atendimento especializado e atento. 
+                Estamos aqui para garantir que você receba o suporte necessário com a máxima competência e cuidado.
+            </p>
+          </div>
+          <span><i class="ri-heart-line"></i></span>
+          <div>
+            <h4>Suporte Medicinal</h4>
+            <p>
+                Oferecemos um suporte medicinal de excelência, 
+                equipado com tecnologia de ponta. Nossa equipe de profissionais altamente qualificados está pronta para fornecer um atendimento especializado e dedicado, 
+                garantindo que você receba o melhor cuidado possível.
+                
+            </p>
+          </div>
+          <span><i class="ri-hospital-line"></i></span>
+          <div>
+            <h4>Cuidados Médicos</h4>
+            <p>
+                Nossos serviços médicos oferecem soluções de saúde avançadas para atender às necessidades médicas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container doctors__container" id="pages">
+      <div class="doctors__header">
+        <div class="doctors__header__content">
+          <h2 class="section__header">Conheça Nossa Equipe!</h2>
+          <p>
+            Estamos orgulhosos de nossa equipe de médicos, 
+            cuja experiência e dedicação garantem um atendimento de excelência para você.
+          </p>
+        </div>
+        <div class="doctors__nav">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="doctors__grid">
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="imagens/doctor-1.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <h4>Dr. Fernanda</h4>
+          <p>Medica</p>
+        </div>
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="imagens/doctor-2.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <h4>Dr. Anderson</h4>
+          <p>Medico</p>
+        </div>
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="imagens/doctor-3.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <h4>Dr. Rafael</h4>
+          <p>Medico</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Ampliando a <span>Consciência🩺</span></h3>
+          <p>
+            É uma grande honra para nós acompanhar você em sua jornada de saúde. 
+            Estamos comprometidos em oferecer um atendimento gentil e personalizado, garantindo que cada etapa do seu tratamento seja marcada pela excelência e pelo cuidado.
+          </p>
+          <p>
+            Confie em nossa equipe para cuidar de você e de seus entes queridos. 
+            Juntos, trabalharemos para alcançar os melhores resultados possíveis, sempre com o objetivo de proporcionar o máximo bem-estar e qualidade de vida.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Sobre </h4>
+          <p>Home</p>
+          <p>Sobre Nós</p>
+          <p>Junte-se</p>
+          
+          <p>Termos e condições</p>
+        </div>
+        <div class="footer__col">
+          <h4>Serviços</h4>
+          <p>Search Terms</p>
+          <p>Advance Search</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <p>
+            <i class="ri-map-pin-2-fill"></i> Senac, São Leopoldo.
+          </p>
+          <p><i class="ri-mail-fill"></i> support@care.com</p>
+          <p><i class="ri-phone-fill"></i> (51) 4002 -8922</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p> © Valorize seu corpo como o templo da sua alma.</p>
+          <div class="footer__socials">
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+     <ul id="news-form" > </ul>
+          <script src="scriptNEWS.js"></script>
+          
+  </body>
 </html>

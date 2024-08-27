@@ -10,12 +10,17 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+
+
+
+
+
 const loginForm = document.getElementById("form-login");
 
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault(); // Evita o envio padrão do formulário
 
-    const loginEmail = document.getElementById("email").value;
+    const loginCrm = document.getElementById("crm").value;
     const loginSenha = document.getElementById("senha").value;
 
     // Faz uma chamada para a API para obter os usuários
@@ -27,13 +32,14 @@ loginForm.addEventListener("submit", (e) => {
             return response.json();
         })
         .then(data => {
-            const usuarioEncontrado = data.find(user => user.email === loginEmail && user.senha === loginSenha);
+            const usuarioEncontrado = data.find(user => user.crm === loginCrm && user.senha === loginSenha);
 
             if (usuarioEncontrado) {
                 alert("Login realizado com sucesso");
                 console.log("login realizado")
+                window.location.href = 'perfilMED.html'
             } else {
-                alert("Email ou senha incorretos");
+                alert("CRM ou senha incorretos");
                 console.log("erro")
             }
         })

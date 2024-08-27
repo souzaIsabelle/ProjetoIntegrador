@@ -7,6 +7,7 @@ server.use(express.json());
 server.use(cors());
 
 const dados = require("./data/usuario.json");
+const dadosNews = require("./data/news.json")
 
 server.listen(3000, () => {
     console.log("O servidor está funcional.");
@@ -18,15 +19,16 @@ server.get('/', (req, res) => {
 
 // CREATE DA API
 server.post('/usuario', (req, res) => {
-    const { nome, email, senha } = req.body;
+    const { nome, email,crm, senha } = req.body;
     
-    if (!nome || !email || !senha) {
+    if (!nome || !crm || !email || !senha) {
         return res.status(400).json({ mensagem: "Dados incompletos, tente novamente" });
     } else {
         const novoUsuario = {
             id: dados.Usuarios.length + 1, // Gera um novo ID baseado no tamanho atual do array de usuários
             nome: nome,
             email: email,
+            crm: crm,
             senha: senha
         };
 
@@ -42,6 +44,8 @@ server.get('/usuario', (req, res) => {
     return res.json(dados.Usuarios);
 });
 
+
+
 // UPDATE DA API
 server.put('/usuario/:id', (req, res) =>{
     const usuarioId = parseInt(req.params.id)
@@ -54,6 +58,7 @@ server.put('/usuario/:id', (req, res) =>{
     } else {
         dados.Usuarios[indiceUsuario].nome = atualizarUser.nome || dados.Usuarios[indiceUsuario].nome
         dados.Usuarios[indiceUsuario].email = atualizarUser.email || dados.Usuarios[indiceUsuario].email
+        dados.Usuarios[indiceUsuario].crm = atualizarUser.crm || dados.Usuarios[indiceUsuario].crm
         dados.Usuarios[indiceUsuario].senha = atualizarUser.senha || dados.Usuarios[indiceUsuario].senha
 
         salvarDados(dados)
@@ -77,4 +82,28 @@ server.delete('/Usuario/:id', (req,res) => {
 // Função que salva os dado
 function salvarDados(){
     fs.writeFileSync(__dirname + '/data/usuario.json', JSON.stringify(dados, null, 2))
+}
+
+//////////////News//////////
+
+server.post('/News', (req, res) => {
+    const novoNews = req.body
+
+    if (!novoNews.nome || !novoNews.email || !novoNews.sobrenome) {
+        return res.status(400).json({ mensagem: "Dados incompletos, tente novamente" })
+    } else {
+        dadosNews.News.push(novoNews)
+        salvarDadosnews(dadosNews)
+
+        return res.status(201).json({ mensagem: "Dados completos, cadastro feito com sucesso!" })
+    }
+})
+
+// Read da API
+server.get('/News', (req, res) => {
+    return res.json(dadosNews.News)
+})
+
+function salvarDadosnews(){
+    fs.writeFileSync(__dirname + '/data/news.json', JSON.stringify(dadosNews, null, 2))
 }
